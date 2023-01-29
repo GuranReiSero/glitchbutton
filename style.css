@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: black;
+}
+
+button {
+    width: 15rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    background-color: #eee;
+    color: black;
+    box-shadow: -5px 5px #aaa;
+    animation: glitch 3s linear infinite;
+    font-family: monospace;
+    transition: all .2s;
+}
+
+button:active {
+    transform: translateX(-5px) translateY(5px);
+    box-shadow: -2px 2px #aaa;
+    transition: all .2s;
+}
+
+@keyframes glitch {
+    0% {
+        transform: rotateX(10deg) skewX(90deg);
+        background-color: #0ffbf9;
+        filter: blur(3px);
+    }
+    1% {
+        transform: none;
+        background-color: #eee;
+        filter: blur(0);
+    }
+    2% {
+        transform: rotateX(10deg) skewX(90deg);
+        background-color: #cc0f39;
+        filter: blur(3px);
+    }
+    3% {
+        transform: rotateX(12deg) skewX(79deg);
+        background-color: #eee;
+        filter: blur(0);
+    }
+    4% {
+        transform: translateX(20px) skewX(11deg);
+        background-color: #0ffbf9;
+        filter: blur(3px);
+    }
+    5% {
+        transform: rotateY(10deg) skewY(30deg);
+        background-color: #eee;
+        filter: blur(0);
+    }
+    6% {
+        transform: translateX(-50px) skewX(40deg);
+        background-color: #cc0f39;
+        filter: blur(3px);
+    }
+    7% {
+        transform: rotateX(7deg) skewX(81deg);
+        background-color: #eee;
+        filter: blur(0);
+    }
+    8% {
+        transform: none;
+    }
+}
